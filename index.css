@@ -1,0 +1,25 @@
+.loco{
+    display: flex;
+    flex-direction: column;
+    margin:  5% 20%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.pacchi{
+    border-radius: 8px;
+    margin: 1% 0;
+}
+
+.boton{
+    margin: 5% 0;
+    border-radius: 20px;
+    padding: 8px;
+    color: white;
+    background-color: blue;
+}
+
+.boton:hover{
+    background-color: green;
+}
