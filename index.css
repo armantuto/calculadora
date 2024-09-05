@@ -1,7 +1,8 @@
 .loco{
     display: flex;
+    width: 70%;
     flex-direction: column;
-    margin:  5% 20%;
+    margin: 20% 10%;
     border: 2px solid black;
     border-radius: 10px;
     padding: 5%;
@@ -9,7 +10,7 @@
 
 .pacchi{
     border-radius: 8px;
-    margin: 1% 0;
+    margin: 5% 0;
 }
 
 .boton{
