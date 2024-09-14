@@ -3,7 +3,7 @@ function sumarCantidadesPorLista() {
     const cityLists = document.querySelectorAll('.city-list');
 
     // Recorrer cada lista de ciudades
-    cityLists.forEach(list => {
+    cityLists.forEach((list, index) => {
         // Inicializar el total para la lista actual en 0
         let total = 0;
         let spezzatura = 0;
@@ -29,7 +29,8 @@ function sumarCantidadesPorLista() {
 
 
     var pacchi = total
-    var select = document.getElementById('miSelect').value;
+    var select = list.querySelector('.miSelect').value;
+
     var fija = 1
 
     var pacchiX = pacchi / select
@@ -39,20 +40,34 @@ function sumarCantidadesPorLista() {
      var pacchiDaAdd = decimales / pacoRestante
      var result = numeroEntero + " Mani da " + select + " pacchi  " 
      
+    
+    
      if (numeroEntero < 1) {
         result = ""
     }
      
-     
-
-     if (pacchiDaAdd > 0) {
+    
+     if (pacchiDaAdd > 0 && numeroEntero > 0 ) {
         result += " + "  + pacchiDaAdd.toFixed(0) + " pachi "
+    }
+     
+    if (pacchiDaAdd > 0 && numeroEntero < 1 ) {
+        result += pacchiDaAdd.toFixed(0) + " pachi "
     }
      
      
      if (spezzatura > 0) {
-        result += " e " + spezzatura + " spezzatura";
+        result += " e " + spezzatura + " spezzature";
     }
+    let uniqueKey = "clave_" + index; // Usamos el índice del bucle para crear una clave única
+    localStorage.setItem(uniqueKey, result);
+    let popo = localStorage.getItem("clave_0", result)
+    console.log(popo)
+
+    // Recuperar el valor del localStorage (solo para verificar)
+    let oki = localStorage.getItem(uniqueKey);
+    console.log(oki);  // Imprime el resultado guardado en el localStorage
+
       console.log(result)
      list.querySelector('.bancale').innerText = result;
 
