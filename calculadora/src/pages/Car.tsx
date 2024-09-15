@@ -117,9 +117,8 @@ const Car: FunctionComponent<CarProps> = ({ name, cities }) => {
       </table>
       <div className="mt-3 me-5">
         {" "}
-        <Button className="me-3" onClick={handleCalcolate}>
-          Calcolo Bancale
-        </Button>
+        <button type="button" className="btn btn-primary me-3" onClick={handleCalcolate}>Calcolo Bancale</button>
+
         <span className="bancale" id="total">
           {total.result}
         </span>
