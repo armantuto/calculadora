@@ -1,6 +1,9 @@
 import { FunctionComponent, useState } from "react";
 import { Button } from "react-bootstrap";
-
+/// COMPONENT CAR 
+// Viene utilizzado en Home 
+// recibe el nombre (1,2,3,5,6,7,8,9)
+// recibe las ciudades que va el carro
 interface CarProps {
   name: string;
   cities: string[];
