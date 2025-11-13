@@ -70,6 +70,7 @@ function sumarCantidadesPorLista() {
 
       console.log(result)
      list.querySelector('.bancale').innerText = result;
+     
 
 
 
